@@ -5,14 +5,8 @@ import { data } from "../data/data";
 // Return example: 234234.234
 
 export function getOrbitalPeriodsSum(data) {
-  let sum = data.asteroids 
-  .reduce((acc, asteroid) => {
-    if (asteroid.orbitalPeriod) {
-    return acc + asteroid.orbitalPeriod;
-    }
-    return acc; 
-  }, 0);
-  return sum;
+  return data.asteroids 
+  .reduce((acc, asteroid) =>  (acc + asteroid.orbitalPeriod), 0);
 }
 
 
@@ -21,3 +15,13 @@ export function getOrbitalPeriodsSum(data) {
 // Once you're finished run the test with "npm run test-14"
 // If the test has all tests passed, switch to the next exercise file
 // If any of the tests fails, refactor the code and run the test command after you've fixed the function
+
+
+// let sum = data.asteroids 
+//   .reduce((acc, asteroid) => {
+//     if (asteroid.orbitalPeriod) {
+//     return acc + asteroid.orbitalPeriod;
+//     }
+//     return acc; 
+//   }, 0);
+//   return sum;
